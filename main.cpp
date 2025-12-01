@@ -4,59 +4,114 @@
 #include <fstream>
 #include <chrono>
 #include <thread>
+
+#ifdef _WIN32
+    #define PLATFORM_CHAR 'w'
+#elif __linux__
+    #define PLATFORM_CHAR 'l'
+#else
+    #define PLATFORM_CHAR 'u' // 'u' for unknown/default
+#endif
+
+class info
+{  
+    public:
+    char systemtype = PLATFORM_CHAR;
+};
+
+class system
+{
+    public:
+
+    class console
+    {
+        void clear
+        {
+            if (info.systemtype = w)
+            {
+                system(cls)
+            }
+            else if (info.systemtype = l)
+            {
+                system(clear)
+            }
+            else if
+            {
+                
+            }
+            else
+            {
+                std::cout  << "system.console.clear error info.systemtype dose not contain proper data"
+            }
+        }
+    }
+
+};
 class io {
     public:
+        void throwerror(std::string error)
+        {
+            for (int i = 1; i == 10; i++)
+            {
+                std::cout << std::endl;
+            }
+            for (int i = 1; i == 10; i++)
+            {
+                std::cout << "\\\\\\*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*///" << std::endl;
+            }
+            int spacesrequired = 41 - error.length();
+            if  (spacesrequired <= 0)
+            {
+                // handle long errors
+                goto errorend;
+            }
+            else if (spacesrequired % 2 != 0)
+            {
+                
+            }
+            spacesrequired / 2;
+            std::cout << "\\\\*" << "" << "*//";
+            errorend:
+            
+        }
         void displaytest() {
+            int i = 0;
             do
             {
-                int i = 0;
             
-            std::cout << spacesin(i); << "x x x x" << std::endl;
-            std::cout << spacesin(i); << "x     x" << std::endl;
-            std::cout << spacesin(i); << "x     x" << std::endl;
-            std::cout << spacesin(i); << "x x x x" << std::endl;
+            std::cout << spacesin(i) << "x x x x" << std::endl;
+            std::cout << spacesin(i) << "x     x" << std::endl;
+            std::cout << spacesin(i) << "x     x" << std::endl;
+            std::cout << spacesin(i) << "x x x x" << std::endl;
             std::this_thread::sleep_for(std::chrono::milliseconds(500));
             system("clear");
             
-            std::cout << spacesin(i); << "       " << std::endl;
-            std::cout << spacesin(i); << "  x x  " << std::endl;
-            std::cout << spacesin(i); << "  x x  " << std::endl;
-            std::cout << spacesin(i); << "       " << std::endl;
+            std::cout << spacesin(i) << "       " << std::endl;
+            std::cout << spacesin(i) << "  x x  " << std::endl;
+            std::cout << spacesin(i) << "  x x  " << std::endl;
+            std::cout << spacesin(i) << "       " << std::endl;
             std::this_thread::sleep_for(std::chrono::milliseconds(500));
             system("clear");
             i++;
             }
             while (true);
         }
-        std::string input() {
-            std::string data;
-            std::cin >> data;
-            return data;
-        }
-        void print(std::string data)
-        {
-            std::cout << data;
-        }
-        void println(std::string data)
-        {
-            std::cout << data << std::endl;
-        }
         std::string spacesin(int i)
         {
-            std::string spaces = ""
-            for (int x = 1;, x == i, i++;);
+            std::string spaces = "";
+            for (int x = 0; x == i; i++);
             {
-                spaces << " "
+                spaces += " ";
             }
+            return spaces;
         }
 };
 
 int main() {
-    int int1 1;
+    int int1 = 1;
     io io;
-    io.println("Hello, World!");
     io.displaytest();
-    io.print("this is the memory value of int1:");
-    io.println(&int1);
-    return 0
+    std::cout << "this is the memory value of int1:";
+    std::cout << &int1;
+    return 0;
 }
