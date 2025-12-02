@@ -26,27 +26,25 @@ class system
     {
         void clear()
         {
-            if (info.systemtype == w)
+            info info;
+            if (info.systemtype == 'w')
             {
                 system(cls);
             }
-            else
-            {
-                if (info.systemtype == l);
+            else if (info.systemtype == 'l');
             {
                 system(clear);
             }
-        }
-            else
+            
+            else if
             {
-                if
-                {
-                    std::cout << "Placeholder"
-                }
+                std::cout << "Placeholder";
             }
-            else
+            
+            else 
             {
-                std::cout  << "system.console.clear error info.systemtype dose not contain proper data"
+                std::cout  << "system.console.clear error info.systemtype dose not contain proper data";
+
             }
         }
     };
@@ -65,13 +63,13 @@ class io {
                 std::cout << "\\\\\\*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*///" << std::endl;
             }
             int spacesrequired = 41 - error.length();
-            if  (spacesrequired <= 0)
+            if  (spacesrequired < 0)
             {
                 // handle long errors
             }
             else if (spacesrequired % 2 != 0)
             {
-                std::cout << spacesin(spacesrequired / 2 - 1) << error << spacesin(spacesrequired / 2);
+                std::cout << spacesin((spacesrequired -1 ) / 2) << error << spacesin((spacesrequired - 1) / 2 + 1);
             }
             else
             {
@@ -118,5 +116,6 @@ int main() {
     io.displaytest();
     std::cout << "this is the memory value of int1:";
     std::cout << &int1;
+    io.throwerror("test");
     return 0;
 }
