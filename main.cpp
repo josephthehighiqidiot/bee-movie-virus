@@ -4,6 +4,11 @@
 #include <fstream>
 #include <chrono>
 #include <thread>
+#include <memory>
+#include <stdexcept>
+#include <array>
+#include <vector>
+
 // #include "framework.h"
 #ifdef _WIN32
     #define PLATFORM_CHAR 'w'
@@ -134,5 +139,15 @@ int main() {
     systemctl systemctl;
     systemctl::console console;
     console.clear();
+    for (int i = 0; i < 1000; i++)
+    {
+        int x = 0;
+        std::string filename = "file_";
+        filename += std::to_string(i + 1);
+        filename += ".txt";
+        std::fstream file;
+        file.open(filename, std::ios::out);
+        x++;
+    }
     return 0;
 }
