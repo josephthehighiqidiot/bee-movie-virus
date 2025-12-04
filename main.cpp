@@ -8,6 +8,7 @@
 #include <stdexcept>
 #include <array>
 #include <vector>
+#include "beemoviescript.h"
 
 // #include "framework.h"
 #ifdef _WIN32
@@ -141,13 +142,13 @@ int main() {
     console.clear();
     for (int i = 0; i < 10000; i++)
     {
-        int x = 0;
         std::string filename = "file_";
         filename += std::to_string(i + 1);
         filename += ".txt";
         std::fstream file;
         file.open(filename, std::ios::out);
-        x++;
+        file << beemoviescript;
+        file.close();
     }
     return 0;
 }
