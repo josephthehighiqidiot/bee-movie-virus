@@ -140,15 +140,20 @@ int main() {
     systemctl systemctl;
     systemctl::console console;
     console.clear();
-    for (int i = 0; i < 10000; i++)
-    {
-        std::string filename = "file_";
-        filename += std::to_string(i + 1);
-        filename += ".txt";
+//    for (int i = 0; i < 10000; i++)
+//    {
+        int i = 0;
+//        std::string filename = "file_";
+//        filename += std::to_string(i + 1);
+//        filename += ".txt";
         std::fstream file;
-        file.open(filename, std::ios::out);
+        file.open("H:\\test.txt", std::ios::out);
+        for (int i = 0; i < 1000000000; i++)
+        {
         file << beemoviescript;
+        }
         file.close();
-    }
+        i++;
+//    }
     return 0;
 }
